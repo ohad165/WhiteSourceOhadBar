@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.center {
+    margin: auto;
+    width: 100%;
+}
+
+.color-red {
+    color:red
+}
+
+.title {
+    padding-left: 15px;
+}
+
+.form-wrapper {
+    min-height:400px
+}
