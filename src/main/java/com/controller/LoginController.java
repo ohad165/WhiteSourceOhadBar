@@ -28,7 +28,6 @@ public class LoginController {
 	private LoginService loginService;
 
 	@GetMapping(value = Routes.WHITE_SOURCE_FULL_STACK)
-	@ResponseBody
 	public ModelMap loginWithHibernate(HttpServletRequest request,
 									   @PathVariable("userName") String userName,
 									   @PathVariable("password") String password) {
