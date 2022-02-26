@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
@@ -19,7 +18,7 @@ public class Application {
 	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+		SpringApplication.run(Application.class, args);
 		logger.info("********** Ready and running ***********");
 	}
 
@@ -27,7 +26,7 @@ public class Application {
 	public CommandLineRunner run(EmployeeRepository repository) {
 		return (args) -> {
 			insertFourEmployees(repository);
-			System.out.println(repository.findAll());
+			logger.info(String.valueOf(repository.findAll()));
 		};
 	}
 

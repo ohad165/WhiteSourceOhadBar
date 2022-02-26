@@ -2,6 +2,8 @@ package com;
 
 public class Constants {
 
+    private Constants() { }
+
     // Hibernate error get employee const
     public static final String ERROR_PULLING_DB_DATA = "Error pulling hibernate data msg";
 

@@ -3,8 +3,6 @@ package com.services;
 import com.EmployeeRepository;
 import com.data.Employee;
 import com.dto.EmployeeDto;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +16,6 @@ import static com.Constants.EMPLOYEE_SERVICE;
 
 @Service(EMPLOYEE_SERVICE)
 public class DefaultEmployeeService implements EmployeeService {
-
-    private final Logger logger = LoggerFactory.getLogger(DefaultEmployeeService.class);
 
     @Autowired
     private EmployeeRepository employeeRepository;
