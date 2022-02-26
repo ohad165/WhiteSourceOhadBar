@@ -10,7 +10,7 @@ public class LoginService {
     @Autowired
     private EmployeeService employeeService;
 
-    public boolean isEmployeeValid(String userName, String password) {
+    public boolean validateEmployee(String userName, String password) {
         return  employeeService
                 .getAllEmployees().stream()
                 .anyMatch(dbEmployee -> validateLogin(dbEmployee, userName, password));

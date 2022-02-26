@@ -35,9 +35,9 @@ public class LoginController {
 		ModelMap model = new ModelMap();
 
 		try {
-			boolean isEmployeeValid = loginService.isEmployeeValid(userName, password);
-			String msg = isEmployeeValid ? MODAL_MAP_SUCCESS_RESULT : MODAL_MAP_FAILED_RESULT;
-			model.addAttribute(MODAL_MAP_RESULT, msg);
+			boolean isValid = loginService.validateEmployee(userName, password);
+			String response = isValid ? MODAL_MAP_SUCCESS_RESULT : MODAL_MAP_FAILED_RESULT;
+			model.addAttribute(MODAL_MAP_RESULT, response);
 		} catch (Exception e) {
 			model.addAttribute(MODAL_MAP_ERRORS, e);
 			logger.error(ERROR_PULLING_DB_DATA, e.getMessage());
