@@ -32,9 +32,10 @@ public class LoginController {
 	public ModelMap loginWithHibernate(HttpServletRequest request,
 									   @PathVariable("userName") String userName,
 									   @PathVariable("password") String password) {
-		ModelMap model = new ModelMap();
+		ModelMap model = null;
 
 		try {
+			model = new ModelMap();
 			boolean isValid = loginService.validateEmployee(userName, password);
 			String response = isValid ? MODAL_MAP_SUCCESS_RESULT : MODAL_MAP_FAILED_RESULT;
 			model.addAttribute(MODAL_MAP_RESULT, response);
