@@ -25,12 +25,12 @@ public class Application {
 	@Bean
 	public CommandLineRunner run(EmployeeRepository repository) {
 		return (args) -> {
-			insertFourEmployees(repository);
+			insertEmployees(repository);
 			logger.info(String.valueOf(repository.findAll()));
 		};
 	}
 
-	private void insertFourEmployees(EmployeeRepository repository) {
+	private void insertEmployees(EmployeeRepository repository) {
 		repository.save(new Employee("Einav Shechter", "1234"));
 		repository.save(new Employee("Ruslan Gogerman", "12345"));
 		repository.save(new Employee("Ohad Bar", "123456"));
