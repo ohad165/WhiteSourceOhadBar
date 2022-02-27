@@ -10,5 +10,6 @@ public class Routes {
     // Hibernate Api const
     public static final String EMPLOYEES_API = "/employees";
     public static final String GET_EMPLOYEE_ID_API = "/employee/{id}";
+    public static final String DELETE_EMPLOYEE_BY_ID_API = "/delete_employee/{id}";
     public static final String SAVE_EMPLOYEE_API = "/employee";
 }

@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 import static com.Constants.EMPLOYEE_SERVICE;
+import static com.Routes.DELETE_EMPLOYEE_BY_ID_API;
 import static com.Routes.EMPLOYEES_API;
 import static com.Routes.GET_EMPLOYEE_ID_API;
 import static com.Routes.SAVE_EMPLOYEE_API;
@@ -40,7 +41,7 @@ public class EmployeeController {
         return employeeService.saveEmployee(employeeDto);
     }
 
-    @DeleteMapping(GET_EMPLOYEE_ID_API)
+    @DeleteMapping(DELETE_EMPLOYEE_BY_ID_API)
     public Boolean deleteEmployee(@PathVariable Long id) {
         return employeeService.deleteEmployee(id);
     }
